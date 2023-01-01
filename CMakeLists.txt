@@ -6,4 +6,4 @@ find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} )
 
-target_link_libraries(paint ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
+target_link_libraries(paint OpenGL::GL GLUT::GLUT OpenGL::OpenGL ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
